@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<title>Technical Skills</title>
+<link rel="stylesheet" type="text/css" href="ts.css">
+</head>
+<body>
+<div class="header">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()" style="margin-left: 0">&#9776;</span>
+   <img src="learn.png">
+   <a href="home.html">Learning Management System</a>
+	<div class="header-right">
+  <a class="active" href="home.html">Home</a>
+  <a href="course.html">Courses</a>
+  <a href="faculty.html">Faculty</a>
+  <a href="fee.html">FeeDetails</a>
+  <a href="Contact.html">Contact</a>
+  <a href="aboutus.html">About Us</a>
+  </div>
+</div>
+  </div>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <img src="https://newerp.kluniversity.in/images/default_user.jpg" class="icon" width="35" height="35">
+  <a href="profile.html"><i class="fa fa-fw fa-user"></i>My Profile</a>
+  <a href="notifications.html"><i class="fa fa-fw fa-bell"></i>Notifications</a>
+  <a href="grades.html"><i class="fa fa-fw fa-book"></i>Grades</a>
+  <a href="welcome.html"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Assignment Submitted!!";
+}
+}
+</script>
+<center><u><h1>TECHNICAL SKILLS</h1></u></center>
+<center><img src="ts.jpg"></center>
+<h3 style="margin-left: 25px"><u>ASSIGNMENT:-</u></h3>
+<img src="">
+  <center>
+<form role="form">
+<div class="form-group">
+<label class="col-25">Tittle:</label>
+<input type="text"  placeholder="Tittle" class="col-75">
+</div>
+<div class="form-group">
+<label class="col-25">Save As:</label>
+<input type="text" placeholder="Save As" class="col-75">
+</div>
+<div class="form-group">
+<label class="col-25">File:</label>
+<input type="file"  class="col-75">
+</div>
+<br>
+<button class="btn card_btn" id onclick="return myFunction()">SUBMIT</button>
+<center><p class="demo"></p></center>
+</form>
+</center>
+</body>
+</html>

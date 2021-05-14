@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SignUp</title>
+  <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+<script>
+{
+  function check1(){
+        var n=document.getElementById('uname').value;
+        var error="";
+        if(n.length<6){
+      error="Username should contain atleast 6 characters";
+      document.getElementById("ner").innerHTML=error;}
+        for(var i=0;i<n.length;i++){
+            if(n[i]=='0'||n[i]=='1'||n[i]=='2'||n[i]=='3'||n[i]=='4'||n[i]=='5'||n[i]=='6'||n[i]=='7'||n[i]=='8'||n[i]=='9'){
+                error=error+"\n"+"username should not contain numbers";
+                document.getElementById("ner").innerHTML=error;
+            break;}
+        }
+        document.getElementById("ner").innerHTML=error;
+     
+    }
+      function check2(){
+        var n=document.getElementById('fname').value;
+        var error="";
+        if(n.length<6){
+      error="FirstName should contain atleast 6 characters";
+      document.getElementById("npa").innerHTML=error;}
+        for(var i=0;i<n.length;i++){
+            if(n[i]=='0'||n[i]=='1'||n[i]=='2'||n[i]=='3'||n[i]=='4'||n[i]=='5'||n[i]=='6'||n[i]=='7'||n[i]=='8'||n[i]=='9'){
+                error=error+"\n"+"Name should not contain numbers";
+                document.getElementById("npa").innerHTML=error;
+            break;}
+        }
+        document.getElementById("npa").innerHTML=error;
+     
+    }
+      function check3(){
+        var n=document.getElementById('lname').value;
+        var error="";
+        if(n.length<6){
+      error="LastName should  contain atleast 6 characters";
+      document.getElementById("nem").innerHTML=error;}
+        for(var i=0;i<n.length;i++){
+            if(n[i]=='0'||n[i]=='1'||n[i]=='2'||n[i]=='3'||n[i]=='4'||n[i]=='5'||n[i]=='6'||n[i]=='7'||n[i]=='8'||n[i]=='9'){
+                error=error+"\n"+"Name should not contain numbers";
+                document.getElementById("nem").innerHTML=error;
+            break;}
+        }
+        document.getElementById("nem").innerHTML=error;
+     
+    }
+    function check4(){
+        var error="";
+        var n1=document.getElementById('password').value.length;
+        if(n1<6){
+            error="Password should not be less than 6 characters";
+    document.getElementById("nan").innerHTML=error;}
+    document.getElementById("nan").innerHTML=error;
+
+    }
+    function check6(){
+        var error="";
+        var n1=document.getElementById('password').value.length;
+        var n2=document.getElementById('cpassword').value.length;
+        var n3=document.getElementById('password').value;
+        var n4=document.getElementById('cpassword').value;
+        if(n2!=n1 && n3!=n4){
+            error="Confirm Password must be same as Password";
+    document.getElementById("nta").innerHTML=error;}
+    document.getElementById("nta").innerHTML=error;
+
+    }
+    function check5(){
+        var error="";
+        var c=0;
+        var n=document.getElementById("email").value;
+        if(n[n.length-1]=='m'&&n[n.length-2]=='o'&&n[n.length-3]=='c'){
+        for(var i=0;i<n.length;i++){
+        if(n[i]=='@'){
+        c=1;
+            break;} }}
+            if(c==0)
+            error="E-Mail must be in name@domain.com format";
+            document.getElementById("nnu").innerHTML=error;
+             
+    }
+    function check(){
+        var n1=document.getElementById('uname').value;
+        var n2=document.getElementById('fname').value;
+        var n3=document.getElementById('lname').value;
+        var n4=document.getElementById('email').value;
+        var n5=document.getElementById('password').value;
+        var n6=document.getElementById('cpassword').value;
+        var n7="";
+        if (n1=="" && n2=="" && n3=="" && n4=="" && n5=="" && n6=="") {
+          return false;
+        }
+        else if(n6!=n5){
+           n7="Confirm Password must be same as Password";
+    document.getElementById("nta").innerHTML=n7;
+    return false;
+        }
+        return true;
+    }
+
+}  
+</script>
+<body>
+<div class="login-box">
+  <h2>SignUp</h2>
+  <form>
+    <div class="user-box">
+      <br>
+      <div id="ner" class="col"></div>
+      <input type="text" id="uname" required="required" onchange="check1()">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <br>
+      <div id="npa" class="col"></div>
+      <input type="text" id="fname" required="required" onchange="check2()">
+      <label>First Name</label>
+    </div>
+    <div class="user-box">
+      <br>
+      <div id="nem" class="col"></div>
+      <input type="text" id="lname" required="required" onchange="check3()">
+      <label>Last Name</label>
+    </div>
+    <div class="user-box">
+      <br>
+      <div id="nnu" class="col" ></div>
+      <input type="text" id="email" required="required" onchange="check5()">
+      <label>Email-Id</label>
+    </div>
+    <div class="user-box">
+      <br>
+      <div id="nan" class="col"></div>
+      <input type="password" id="password" required="required" onchange="check4()">
+      <label>Password</label>
+    </div>
+    <div class="user-box">
+      <br>
+      <div id="nta" class="col"></div>
+      <input type="password" id="cpassword" required="required" onchange="check6()">
+      <label>Confirm Password</label>
+    </div>
+    <a  href="" onclick="return check()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      SignUp
+    </a>
+  </form>
+  <p class="down">Already have an account? <a href="login.html" >Log in</a></p>
+</div>
+</body>
+</html>

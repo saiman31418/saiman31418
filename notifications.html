@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<title>Notifications</title>
+<link rel="stylesheet" type="text/css" href="notifications.css">
+</head>
+<body>
+<div class="header">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()" style="margin-left: 0">&#9776;</span>
+   <img src="learn.png">
+   <a href="home.html">Learning Management System</a>
+	<div class="header-right">
+  <a class="active" href="home.html">Home</a>
+  <a href="course.html">Courses</a>
+  <a href="faculty.html">Faculty</a>
+  <a href="fee.html">FeeDetails</a>
+  <a href="Contact.html">Contact</a>
+  <a href="aboutus.html">About Us</a>
+  </div>
+</div>
+  </div>
+<div class="image">
+  <center><img src="notification.png"></center>
+</div>
+<div class="display">
+  <center><h1>No Notifications</h1></center>
+</div>
+
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <img src="https://newerp.kluniversity.in/images/default_user.jpg" class="icon" width="35" height="35">
+  <a href="profile.html"><i class="fa fa-fw fa-user"></i>My Profile</a>
+  <a href="notifications.html"><i class="fa fa-fw fa-bell"></i>Notifications</a>
+  <a href="grades.html"><i class="fa fa-fw fa-book"></i>Grades</a>
+  <a href="welcome.html"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>

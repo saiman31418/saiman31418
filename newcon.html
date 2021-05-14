@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <title>Contact Us</title>   
+</head> 
+ 
+<body>   
+ 
+<div class="staticpage-wrapper container">
+    <h1 class="staticpage-title">Contact Form</h1>
+    <div class="staticpage-content">
+        <div class="contact-wrapper">
+            <div class="contact-intro mb-5">
+                <p>This is an example of a Moodle contact form page.</p>
+              
+            </div>
+            <div class="contact-form-box rounded p-lg-5 mb-5">
+                <form id="contact-form" class="contact-form" action="../contact/index.php" method="post">
+                    <h2 class="text-center mb-3">How Can We Help?</h2>
+                    <div class="text-center mb-4">Want to get in touch with us or have a question?  Fill out this form or contact <a href="#">elearning@3rdwavemedia.com</a></div>
+                    <div class="form-row">                                                           
+                        <div class="form-group col-12 col-xl-6">
+                            <label class="sr-only" for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" minlength="2" maxlength="45" required="required" pattern="[A-zÀ-ž]([A-zÀ-ž\s]){2,}">
+                        </div>                    
+                        <div class="form-group col-12 col-xl-6">
+                            <label class="sr-only" for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required">
+                        </div>
+                         
+                        <div class="form-group col-12">
+                            <label class="sr-only" for="cmessage">Your message</label>
+                            <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="10" required="required"></textarea>
+                        </div>
+                        <input type="hidden" id="sesskey" name="sesskey" value="">
+                        <script>document.getElementById('sesskey').value = M.cfg.sesskey;</script>
+                        <div class="form-group col-12">
+                            <input type="submit" name="submit" id="submit" value="Send" class="btn btn-block btn-primary py-2">
+                             
+                        </div>                           
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+</div>
+               
+</body>
+</html> 
+Step 4

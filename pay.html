@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<title>Payment</title>
+<link rel="stylesheet" type="text/css" href="pay.css">
+</head>
+<body>
+<div class="header">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()" style="margin-left: 0">&#9776;</span>
+   <img src="learn.png">
+   <a href="home.html">Learning Management System</a>
+	<div class="header-right">
+  <a class="active" href="home.html">Home</a>
+  <a href="course.html">Courses</a>
+  <a href="faculty.html">Faculty</a>
+  <a href="fee.html">FeeDetails</a>
+  <a href="Contact.html">Contact</a>
+  <a href="aboutus.html">About Us</a>
+  </div>
+</div>
+  </div>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <img src="https://newerp.kluniversity.in/images/default_user.jpg" class="icon" width="35" height="35">
+  <a href="profile.html"><i class="fa fa-fw fa-user"></i>My Profile</a>
+  <a href="notifications.html"><i class="fa fa-fw fa-bell"></i>Notifications</a>
+  <a href="grades.html"><i class="fa fa-fw fa-book"></i>Grades</a>
+  <a href="welcome.html"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<center>
+<div class="checkout-panel">
+  <div class="panel-body">
+    <u><h2 class="title">CHECKOUT</h2></u>
+ 
+    <div class="payment-method">
+      <label for="card" class="method card">
+        <div class="card-logos">
+          <img src="rupay.jpg"/>
+          <img src="visa.png"/>
+          <img src="mastercard.png"/>
+          <img src="paypal.png"/>
+        </div>
+        <div class="radio-input">
+          <input id="card" type="radio" name="payment">
+          Pay:Rs.85000/-
+        </div>
+      </label>
+    </div>
+
+    <div class="input-fields">
+      <div class="column-1">
+        <label for="cardholder">Cardholder's Name</label>
+        <input type="text" id="cardholder" />
+ 
+        <div class="small-inputs">
+          <div>
+            <label for="date">Valid thru</label>
+            <input type="text" id="date" placeholder="MM / YY" />
+          </div>
+ 
+          <div>
+            <label for="verification">CVV / CVC *</label>
+            <input type="password" id="verification"/>
+          </div>
+        </div>
+ 
+      </div>
+      <div class="column-2">
+        <label for="cardnumber">Card Number</label>
+        <input type="password" id="cardnumber"/>
+ 
+        <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="panel-footer">
+    <button class="btn back-btn">Back</button>
+    <button class="btn next-btn">Next Step</button>
+  </div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="login.css">
+  <script>
+    {
+      function check1(){
+        var n=document.getElementById('uname').value;
+        if(n==""){
+      error="Name Must be filled";
+      document.getElementById("ner").innerHTML=error;
+        }
+      }
+      function check2(){
+        var n=document.getElementById('password').value;
+        if(n==""){
+      error="Password Must be filled";
+      document.getElementById("nan").innerHTML=error;
+        }
+      }
+      function check(){
+        var n1=document.getElementById('uname').value;
+        var n2=document.getElementById('password').value;
+        if (n1=="" && n2=="") {
+          error="Name Must be filled";
+      document.getElementById("ner").innerHTML=error;
+      error1="Password Must be filled";
+      document.getElementById("nan").innerHTML=error1;
+          return false;
+        }
+        else if(n1==""){
+      error="Name Must be filled";
+      document.getElementById("ner").innerHTML=error;
+      return false;
+        }
+        else if(n2==""){
+      error="Password Must be filled";
+      document.getElementById("nan").innerHTML=error;
+      return false;
+        }
+        return true;
+    }
+    }
+  </script> 
+</head>
+<body>
+<div class="login-box">
+  <h2>Login</h2>
+  <form name="myform">
+    <div class="user-box">
+      <br><br>
+      <div id="ner" class="col"></div>
+      <input type="text" id="uname" required="required" onchange="check1()">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <br><br>
+      <div id="nan" class="col"></div>
+      <input type="password" id="password"  required="required" onchange="check2()">
+      <label>Password</label>
+    </div>
+    <a href="home.html" onclick="return check()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Login
+    </a>
+  </form>
+  <p class="down">Don't have an account? <a href="signup.html">sign up</a></p>
+</div>
+</body>
+</html>

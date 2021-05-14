@@ -1,0 +1,97 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+body{
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.header {
+  overflow: hidden;
+  background-image: url("header.jpg");
+  padding: 10px 10px;
+}
+.header img{
+  float: left;
+}
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 2px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: transparent;
+  color: orange;
+}
+.header-right {
+  float: right;
+}
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+    .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #394263;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+span{
+  float: right;
+  margin-top: 10px;
+}
+.icon{
+  margin-left: 48%;
+}
+.mySlides {
+  display:none;
+  height: 661px;
+}
+.w3-content{
+  margin-left: 0px;
+  margin-right: 0px;
+}
